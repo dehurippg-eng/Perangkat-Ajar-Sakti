@@ -1,0 +1,6 @@
+{
+  "name": "Sarang Ilmu Modul Ajar",
+  "description": "Platform penyusunan Modul Ajar dan LKPD Pembelajaran Mendalam Kurikulum Merdeka untuk mata pelajaran umum SD/MI–SMA/MA, siap cetak, PDF, dan Word.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

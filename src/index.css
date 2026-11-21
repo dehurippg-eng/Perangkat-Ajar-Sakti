@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-canvas: #f8fafc;
+  --color-card: #ffffff;
+  --color-ink: #0f2922;
+  --color-ink-foreground: #f4f7f5;
+  --color-ink-muted: #9eb3aa;
+  --color-saffron: #eab308;
+  --color-saffron-deep: #ca8a04;
+  --color-primary: #14533c;
+  --color-primary-foreground: #ffffff;
+  --color-border: #e2e8f0;
+  --color-muted-foreground: #64748b;
+}
+
+@layer utilities {
+  .bg-ink-gradient {
+    background: linear-gradient(155deg, #0b201a 0%, #12332a 55%, #194236 100%);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 9mm 13mm 10mm 13mm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 9.75pt;
+    line-height: 1.42;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-container {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  td,
+  th {
+    vertical-align: top;
+  }
+
+  p,
+  li {
+    orphans: 2;
+    widows: 2;
+  }
+
+  .print-page-break {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .print-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
